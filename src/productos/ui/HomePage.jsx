@@ -75,9 +75,6 @@ function HomePage() {
               <p className="text-lg font-bold text-green-400 mt-2">
                 Q {p.precio.toFixed(2)}
               </p>
-              <p className="text-lg font-bold text-green-400 mt-2">
-                {p.unidadesDisponibles}
-              </p>
               <button
                 className="mt-3 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded flex items-center justify-center"
                 onClick={() =>
