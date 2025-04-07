@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply text-gray-100 bg-gray-900;
+    @apply font-sans leading-relaxed antialiased;
+    @apply [text-rendering:optimizeLegibility] [font-synthesis:none];
+  }
+
+  body {
+    @apply flex items-center justify-center min-h-screen min-w-[320px] m-0;
+  }
+
+  a {
+    @apply font-semibold text-green-400 transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-green-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-extrabold text-white;
+  }
+
+  h1 {
+    @apply text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  button {
+    @apply rounded-lg px-5 py-3 text-lg font-semibold;
+    @apply bg-green-500 text-white transition-all duration-300;
+    @apply hover:bg-green-600 active:bg-green-700;
+    @apply focus:outline-none focus:ring-4 focus:ring-green-400;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 text-gray-200 border border-gray-500;
+    @apply hover:bg-gray-600 hover:border-gray-400;
+    @apply focus:ring-gray-500;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      @apply text-gray-900 bg-gray-100;
+    }
+
+    a {
+      @apply text-green-600;
+    }
+
+    a:hover {
+      @apply text-green-500;
+    }
+
+    button {
+      @apply bg-green-600 text-white;
+    }
+
+    .btn-secondary {
+      @apply bg-gray-200 text-gray-900 border-gray-400;
+      @apply hover:bg-gray-300;
+    }
+  }
+}
